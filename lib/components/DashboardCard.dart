@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:traffic_rules/screens/ViolationsandFines.dart';
 
 class DashboardCard extends StatefulWidget {
   final IconData _icon;
@@ -15,9 +16,15 @@ class _DashboardCardState extends State<DashboardCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.amberAccent,
       child: InkWell(
-        splashColor: Theme.of(context).primaryColor.withAlpha(80),
-        onTap: () {},
+        splashColor: Colors.white.withAlpha(80),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ExpansionTileDemo()),
+          );
+        },
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(

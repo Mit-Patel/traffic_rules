@@ -42,10 +42,13 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors.white,
       appBar: AppBar(
         title: Text("Dashboard"),
+
       ),
       body: GridView.count(
+
           crossAxisCount: 2,
           childAspectRatio: 4 / 5,
           children: List.generate(cards.length, (index) {
