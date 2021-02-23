@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:traffic_rules/screens/ViolationsandFines.dart';
 
 class DashboardCard extends StatefulWidget {
   final IconData _icon;
   final String _title, _description;
+  final VoidCallback onTap;
 
-  const DashboardCard(this._icon, this._title, this._description, {Key key})
+  const DashboardCard(this._icon, this._title, this._description,
+      {Key key, this.onTap})
       : super(key: key);
 
   @override
@@ -20,10 +21,7 @@ class _DashboardCardState extends State<DashboardCard> {
       child: InkWell(
         splashColor: Colors.white.withAlpha(80),
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ExpansionTileDemo()),
-          );
+          widget.onTap();
         },
         child: Padding(
           padding: const EdgeInsets.all(20.0),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:traffic_rules/components/DashboardCard.dart';
 
+import 'ViolationsAndFines.dart';
+
 class Dashboard extends StatefulWidget {
   @override
   _DashboardState createState() => _DashboardState();
@@ -26,34 +28,35 @@ class _DashboardState extends State<Dashboard> {
       "General Traffic Signs you must have knowledge about"
     ],
     ["Emergency Helplines", "Get help at the time of emergency"],
-    ["Fuel Prices", "Latest Fuel & Gas Prices updates"],
     [
       "Documents Information",
       "Information about the documents you should keep with you"
     ],
-    [
-      "Driving License Process",
-      "Step by step procedure to issue a Driving License"
-    ],
-    ["News Feed", "Latest driving & transport news"],
     ["FAQs", "Frequently Asked Questions"],
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Dashboard"),
-
+        title: Text("Traffic Rules"),
       ),
       body: GridView.count(
-
           crossAxisCount: 2,
           childAspectRatio: 4 / 5,
           children: List.generate(cards.length, (index) {
             return DashboardCard(
-                icons[index], cards[index][0], cards[index][1]);
+              icons[index],
+              cards[index][0],
+              cards[index][1],
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ViolationsAndFines()),
+                );
+              },
+            );
           })),
     );
   }
