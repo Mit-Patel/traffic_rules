@@ -9,16 +9,14 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<IconData> icons = [
-    Icons.warning,
-    Icons.attach_money,
-    Icons.drive_eta,
-    Icons.live_help,
-    Icons.local_gas_station,
-    Icons.insert_drive_file,
-    Icons.autorenew,
-    Icons.rss_feed,
-    Icons.help_outline,
+  List<String> icons = [
+    'assets/images/warning.png',
+    'assets/images/fine.png',
+    'assets/images/trafficsign.png',
+    'assets/images/helpline.png',
+    'assets/images/document.png',
+    'assets/images/faq.png',
+
   ];
   List cards = [
     ["Rules & Regulations", "All the significant traffic rules"],
@@ -38,8 +36,9 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.indigo,
       appBar: AppBar(
+        backgroundColor: Colors.amberAccent,
         title: Text("Traffic Rules"),
       ),
       body: GridView.count(

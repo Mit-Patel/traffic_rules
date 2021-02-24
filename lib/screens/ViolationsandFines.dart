@@ -7,7 +7,9 @@ class ViolationsAndFines extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.lightBlueAccent,
         appBar: AppBar(
+          backgroundColor: Colors.amberAccent,
           leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.of(context).pop(),

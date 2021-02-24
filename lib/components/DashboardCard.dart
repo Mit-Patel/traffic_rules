@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:google_fonts/google_fonts.dart';
 import 'package:traffic_rules/screens/ViolationsandFines.dart';
-=======
->>>>>>> 32ac2a9456cd976b0b102e6b06aab5c0206814fa
 
 class DashboardCard extends StatefulWidget {
-  final IconData _icon;
+  final String _icon;
   final String _title, _description;
   final VoidCallback onTap;
 
@@ -22,9 +19,15 @@ class _DashboardCardState extends State<DashboardCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.amberAccent,
+      elevation:5,
+      //margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 16.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+
+      color: Colors.white,
       child: InkWell(
-        splashColor: Colors.white.withAlpha(80),
+        splashColor: Colors.amberAccent.withAlpha(80),
         onTap: () {
           widget.onTap();
         },
@@ -32,7 +35,7 @@ class _DashboardCardState extends State<DashboardCard> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Icon(widget._icon, size: 50.0),
+              Image(image: AssetImage(widget._icon),height: 60,width: 60,),
               SizedBox(
                 height: 10.0,
               ),
@@ -54,6 +57,7 @@ class _DashboardCardState extends State<DashboardCard> {
             ],
           ),
         ),
+
       ),
     );
   }
