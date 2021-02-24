@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:traffic_rules/screens/ViolationsandFines.dart';
 
 class DashboardCard extends StatefulWidget {
@@ -36,7 +37,7 @@ class _DashboardCardState extends State<DashboardCard> {
               Text(
                 widget._title,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20.0),
+                style: GoogleFonts.lato(fontSize: 20.0,fontWeight: FontWeight.w700,),
               ),
               Divider(
                 thickness: 1.0,
@@ -45,7 +46,7 @@ class _DashboardCardState extends State<DashboardCard> {
                 child: Text(
                   widget._description,
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.grey),
+                  style: GoogleFonts.lato(color: Colors.grey,fontWeight: FontWeight.w500,),
                 ),
               ),
             ],

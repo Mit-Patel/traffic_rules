@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExpansionTileDemo extends StatelessWidget {
   @override
@@ -42,9 +43,8 @@ final List<Rules> data = <Rules>[
   <Rules>[
     Rules('1.    Whoever drives or causes or allows to be driven a motor vehicle   carrying a registration mark displayed in  contravention of  rule 50 or rule 51 of the Central Motor Vehicles Rules, 1989 in public place.'),
     Rules('2.    Two wheeler vehicle'),
-    Rules('3.      Three wheeler   '),
-    Rules('4.      Light Motor Vehicle  '),
-
+    Rules('3.    Three wheeler'),
+    Rules('4.    Light Motor Vehicle'),
   ])
 ];
 class EntryItem extends StatelessWidget {
