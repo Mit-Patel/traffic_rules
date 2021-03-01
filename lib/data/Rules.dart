@@ -13,7 +13,7 @@ class Rules {
 }
 
 // This is the entire multi-level list displayed by this app
-final List<Rules> data = <Rules>[
+final List<Rules> violationData = <Rules>[
   Rules(
     'Driving vehicle exceeding permissible weight etc',
     <SubRule>[
@@ -43,5 +43,47 @@ final List<Rules> data = <Rules>[
     SubRule('4. Light Motor Vehicle', 'Rs. 1000'),
     SubRule('5. Four Wheels Vehicle', 'Rs. 1000'),
     SubRule('6. Other Vehicle', 'Rs. 5000'),
-  ])
+  ]),
+  Rules('Driving Dangerously', <SubRule>[
+    SubRule(
+        '1. Driving a motor vehicle at a speed which is dangerous to the public.',
+        'Two-Three Wheelers: Rs. 1500\n\nLMV: Rs. 3000\n\nOther Vehicles: Rs. 5000'),
+    SubRule(
+        '2. Driving a motor vehicle in a manner which is dangerous to the public.',
+        'Two-Three Wheelers: Rs. 1500\n\nLMV: Rs. 3000\n\nOther Vehicles: Rs. 5000'),
+    SubRule(
+        'NOTE: \n1. The documents produced in electronic form (Digilocker) shall be valid.\n2. The documents shall be produced within 15 days from the date of demand.',
+        ''),
+  ]),
+  Rules('Allowing unauthorized person to drive vehicles', <SubRule>[
+    SubRule('1. Two Wheelers', 'Rs. 2000'),
+    SubRule('2. Other Vehicles', 'Rs. 3000'),
+  ]),
+  Rules('Driving Vehicle in contravention of Section 3 or Section 4', <SubRule>[
+    SubRule('1. Drive vehicle without holding driving license.',
+        'Two wheeler: Rs. 2000\n\nOther Vehicles: Rs. 3000'),
+    SubRule(
+        '2. Drive transport vehicle without holding transport authorization.',
+        'Two wheeler: Rs. 2000\n\nOther Vehicles: Rs. 3000'),
+    SubRule('3. Under age driver drives the vehicle.',
+        'Two wheeler: Rs. 2000\n\nOther Vehicles: Rs. 3000'),
+    SubRule(
+        '4. Drive vehicle in contravention of the conditions of learning license.',
+        'Two wheeler: Rs. 2000\n\nOther Vehicles: Rs. 3000'),
+  ]),
+  Rules('Whoever while driving a motor vehicle', <SubRule>[
+    SubRule(
+        '1. Sounds the horn needlessly or continuously or more than necessary to ensure safety.',
+        'Rs. 1000'),
+    SubRule(
+        '2. Sounds the horn in an area with a traffic sign prohibiting the use of a horn, or	drives a motor vehicle which makes use of a cut -out by which exhaust gases are released other than through the silencer.',
+        'Rs. 1000'),
+  ]),
+  Rules('Others', <SubRule>[
+    SubRule('Failure to use safety belts while driving', 'Rs. 500'),
+    SubRule('Violation of not wearing Helmet', 'Rs. 500'),
+    SubRule(
+        'Failure to allow free passage to emergency vehicles like ambulance, fire fighting vehicle, etc.',
+        'Rs. 1000'),
+  ]),
 ];
